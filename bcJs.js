@@ -10,7 +10,6 @@ $(document).ready(function() {
 		allNum.splice(getNum, 1);
 	}
 	var answerNum = answerNumArray[0]*1000 + answerNumArray[1]*100 + answerNumArray[2]*10 + answerNumArray[3];
-	console.log(answerNumArray);
 	/* 
 		開始猜數字
 	*/
@@ -23,10 +22,6 @@ $(document).ready(function() {
 		guess2 = Math.floor((guessNum - guess1*1000)/100);
 		guess3 = Math.floor((guessNum - guess1*1000 - guess2*100)/10);
 		guess4 = Math.floor(guessNum - guess1*1000 - guess2*100 - guess3*10);
-		console.log(guess1);
-		console.log(guess2);
-		console.log(guess3);
-		console.log(guess4);
 		if(guessTime < 9) {
 			if(guessNum.length >= 4) {
 				if(guessNum != answerNum) {
@@ -115,7 +110,5 @@ function numHint() {
 			countA++;
 			break;
 	}
-	console.log(countA);
-	console.log(countB);
 	return countA + "A" + countB + "B";
 }
