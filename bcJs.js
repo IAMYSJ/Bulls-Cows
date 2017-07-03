@@ -36,9 +36,10 @@ $(document).ready(function() {
 			} else {
 				alert('Please enter a 4-digits number!');
 			}
+			console.log(guessTime);
 		} else {
 			$('#content').append("<tr><td>" + guessTime + "</td><td>" + guessNum + "</td><td>" + numHint() + "</td></tr>");
-			$('#content').append("<tr><td>Answer</td><td>" + answerMum + "</td>");
+			$('#content').append("<tr><td>Answer</td><td>" + answerNum + "</td>");
 			$('#confirmBtn').prop('disabled', true);
 			$('#restartBtn').css('display', 'inline');
 		}
